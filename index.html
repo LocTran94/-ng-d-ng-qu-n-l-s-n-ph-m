@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="main">
+
+    <div id="header">
+        <ul id="nav">
+            <li><a href="">Home</a></li>
+            <li><a href="">Tour</a></li>
+            <li><a href="">Band</a></li>
+            <li><a href="">More</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+
+    </div>
+
+
+    <div id="slider">
+
+    </div>
+
+
+    <div id="content">
+
+    </div>
+
+
+    <div id="footer">
+
+    </div>
+
+
+</div>
+
+
+<form>
+    <h2>Add New Product</h2>
+    <p style="background-color: antiquewhite ; width: 240px"><input TYPE="text" id='push'>
+        <button TYPE="button" onclick="them()" style=" width: 40px; height: 30px; background-color: green">Add
+        </button>
+    </p>
+</form>
+<br>
+<h3>Display All Product</h3> <br>
+
+
+<table id="bang" border="0.5">
+
+
+    <tr>
+        <td>Product Name</td>
+        <td></td>
+        <td></td>
+        <td>4 Product</td>
+    </tr>
+    <tr id="dong">
+        <td id="iphone">Iphone</td>
+        <td>
+            <button id="1" type="button" onclick="xoa('iphone')">DELETE</button>
+        </td>
+        <td>
+            <button type="button" onclick="sua('iphone')">EDIT</button>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td id="samsung">Samsung</td>
+        <td>
+            <button type="button" onclick="xoa('samsung')">DELETE</button>
+        </td>
+        <td>
+            <button type="button" onclick="sua('samsung')">EDIT</button>
+        </td>
+        <td></td>
+    </tr>
+    <tr id="dong3">
+        <td id="oppo">Oppo</td>
+        <td>
+            <button id="3" type="button" onclick="xoa('oppo')">DELETE</button>
+        </td>
+        <td>
+            <button type="button" onclick="sua('oppo')">EDIT</button>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td id="nokia">Nokia</td>
+        <td>
+            <button type="button" onclick="xoa('nokia')">DELETE</button>
+        </td>
+        <td>
+            <button type="button" onclick="sua('nokia')">EDIT</button>
+        </td>
+        <td></td>
+    </tr>
+
+
+    <tr id="dong4">
+        <td id="4"></td>
+        <td>
+            <button type="button" onclick="xoa('4')">DELETE</button>
+        </td>
+        <td>
+            <button type="button" onclick="sua('4')">EDIT</button>
+        </td>
+        <td></td>
+    </tr>
+
+
+</table>
+
+
+</body>
+<script>
+
+
+    let arr = [];
+
+
+
+    // hàm add sẽ push thêm sản phẩm vào mảng
+
+    function them() {
+        let spm = document.getElementById('push').value;
+        arr.push(spm);
+        document.getElementById('4').innerHTML = arr[arr.length - 1];
+    }
+
+
+    // hàm xóa sản phẩm
+
+    function xoa(a) {
+        document.getElementById(a).innerHTML = '';
+
+    }
+
+    // hàm sửa sản phẩm
+
+    function sua(c) {
+        let spm = document.getElementById('push').value;
+        arr.push(spm);
+        document.getElementById(c).innerHTML = arr[arr.length-1];
+    }
+
+
+</script>
+</html>
