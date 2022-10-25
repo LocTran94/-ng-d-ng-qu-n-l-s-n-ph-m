@@ -1,5 +1,6 @@
 const arr = [];
-Display();
+
+//Display();
 
 function add() {
     let id1 = document.getElementById('id').value;
@@ -35,18 +36,30 @@ function xoa(i) {
 function Display() {
     let result = '';
     for (let i = 0; i < arr.length; i++) {
-        console.log(i)
-        result += `
-        <tr>
-        <td>${arr[i].id}</td>
-        <td>${arr[i].name}</td>
-        <td>${arr[i].age}</td>
-        <td>${arr[i].gender}</td>
-        <td>${arr[i].grade}</td>
-        <td>${arr[i].year}</td>
-        <td><button onclick="xoa(${i})">Delete</button></td>
-        <td><button type="button" onclick="sua(${i})">Edit</button></td>
-    </tr>`
+
+        result += '<tr>\n' +
+            '         <td>' + arr[i].id + '</td>\n' +
+            '         <td>' + arr[i].name + '</td>\n' +
+            '         <td>' + arr[i].age + '</td>\n' +
+            '         <td>' + arr[i].gender + '</td>\n' +
+            '         <td>' + arr[i].grade + '</td>\n' +
+            '         <td>' + arr[i].year + '</td>\n' +
+            ' <td><button onclick="xoa('+ i +')">Delete</button></td>\n' +
+            '  <td><button type="button" onclick="sua('+ i +')">Edit</button></td>\n' +
+            // '         <td><button onclick="xoa(${i})">Delete</button></td>\n' +
+            // '         <td><button type="button" onclick="sua(${i})">Edit</button></td>\n' +
+            '     </tr>'
+        //     result += `
+        //     <tr>
+        //     <td>${arr[i].id}</td>
+        //     <td>${arr[i].name}</td>
+        //     <td>${arr[i].age}</td>
+        //     <td>${arr[i].gender}</td>
+        //     <td>${arr[i].grade}</td>
+        //     <td>${arr[i].year}</td>
+        //     <td><button onclick="xoa(${i})">Delete</button></td>
+        //     <td><button type="button" onclick="sua(${i})">Edit</button></td>
+        // </tr>`
     }
     document.getElementById('noidung').innerHTML = result;
 }
@@ -67,7 +80,7 @@ function sua(i) {
         'grade': grade,
         'year': year,
     }
-arr.splice(i,1,person1)
+    arr.splice(i, 1, person1)
     Display()
     document.getElementById('id').value = '';
     document.getElementById('name').value = '';

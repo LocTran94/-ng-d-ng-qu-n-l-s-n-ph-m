@@ -18,16 +18,16 @@ img{
     height: 40px;
     background-color: chartreuse;
      line-height: 40px;
-     position: sticky;
-     top: 130px;
+     /*position: sticky;*/
+     /*top: 130px;*/
 }
 
 #bang2{
-    position: relative;
+    position: absolute;
     left: 350px;
-    top: 68px;
+    top: 190px;
     border:solid 1px;
-    width: 65%;
+    width: 60%;
     text-align: center;
 
 }
@@ -40,7 +40,8 @@ img{
 #bang{
      border:solid 1px;
      width: 300px;
-     height: 300px;
+     height: 292px;
+    text-align: center;
  }
 
 #bang tr{
@@ -52,9 +53,6 @@ img{
 
 
 
- #bang {
-     text-align: center;
- }
 
  #bang button{
      text-align: center;
