@@ -8,12 +8,7 @@ function add() {
     let grade1 = document.getElementById('grade').value;
     let year1 = document.getElementById('year').value;
     let person = {
-        'id': id1,
-        'name': name1,
-        'age': age1,
-        'gender': gender1,
-        'grade': grade1,
-        'year': year1,
+        'id': id1, 'name': name1, 'age': age1, 'gender': gender1, 'grade': grade1, 'year': year1,
     }
     arr.push(person)
     document.getElementById('id').value = '';
@@ -35,14 +30,7 @@ function Display() {
     let result = '';
     for (let i = 0; i < arr.length; i++) {
 
-        result += '<tr>\n' +
-            '         <td>' + arr[i].id + '<button onclick="suaid('+ i +')" >Edit ID</button></td>\n' +
-            '         <td>' + arr[i].name + ' <button onclick="suaname('+ i +')" >Edit Name</button></td>\n' +
-            '         <td>' + arr[i].age + ' <button onclick="suaage('+ i +')" >Edit Age</button></td>\n' +
-            '         <td>' + arr[i].gender + '<button onclick="suagender('+ i +')" >Edit Gender</button></td>\n' +
-            '         <td>' + arr[i].grade + '<button onclick="suagrade('+ i +')" >Edit Gare</button></td>\n' +
-            '         <td>' + arr[i].year + '<button onclick="suagyear('+ i +')" >Edit Year</button></td>\n' +
-            ' <td><button onclick="xoa('+ i +')">Delete</button></td>\n' +
+        result += '<tr>\n' + '         <td>' + arr[i].id + '<br>' +'<button onclick="suaid(' + i + ')" >Edit</button></td>\n' + '         <td>' + arr[i].name + '<br>' + ' <button onclick="suaname(' + i + ')" >Edit</button></td>\n' + '         <td>' + arr[i].age + '<br>' + ' <button onclick="suaage(' + i + ')" >Edit</button></td>\n' + '         <td>' + arr[i].gender + '<br>' + '<button onclick="suagender(' + i + ')" >Edit</button></td>\n' + '         <td>' + arr[i].grade + '<br>' + '<button onclick="suagrade(' + i + ')" >Edit</button></td>\n' + '         <td>' + arr[i].year + '<br>' + '<button onclick="suagyear(' + i + ')" >Edit</button></td>\n' + ' <td>' + '<br>'  +'<button onclick="xoa(' + i + ')">Delete</button></td>\n' +
 
             '     </tr>'
 
@@ -58,11 +46,11 @@ function suaid(i) {
         'id': id2,
         'name': arr[i].name,
         'age': arr[i].age,
-        'gender':  arr[i].gender,
+        'gender': arr[i].gender,
         'grade': arr[i].grade,
         'year': arr[i].year,
     }
-arr.splice(i,1,person2)
+    arr.splice(i, 1, person2)
 
     Display();
     document.getElementById('id').value = '';
@@ -72,10 +60,6 @@ arr.splice(i,1,person2)
     document.getElementById('grade').value = '';
     document.getElementById('year').value = '';
 }
-
-
-
-
 
 
 function suaname(i) {
@@ -85,11 +69,11 @@ function suaname(i) {
         'id': arr[i].name,
         'name': name2,
         'age': arr[i].age,
-        'gender':  arr[i].gender,
+        'gender': arr[i].gender,
         'grade': arr[i].grade,
         'year': arr[i].year,
     }
-    arr.splice(i,1,person3)
+    arr.splice(i, 1, person3)
 
     Display();
     document.getElementById('id').value = '';
@@ -99,7 +83,6 @@ function suaname(i) {
     document.getElementById('grade').value = '';
     document.getElementById('year').value = '';
 }
-
 
 
 function suaage(i) {
@@ -109,11 +92,11 @@ function suaage(i) {
         'id': arr[i].id,
         'name': arr[i].name,
         'age': age2,
-        'gender':  arr[i].gender,
+        'gender': arr[i].gender,
         'grade': arr[i].grade,
         'year': arr[i].year,
     }
-    arr.splice(i,1,person4)
+    arr.splice(i, 1, person4)
 
     Display();
     document.getElementById('id').value = '';
@@ -125,7 +108,6 @@ function suaage(i) {
 }
 
 
-
 function suagender(i) {
     let gender2 = document.getElementById('gender').value;
 
@@ -133,11 +115,11 @@ function suagender(i) {
         'id': arr[i].id,
         'name': arr[i].name,
         'age': arr[i].age,
-        'gender': gender2 ,
+        'gender': gender2,
         'grade': arr[i].grade,
         'year': arr[i].year,
     }
-    arr.splice(i,1,person5)
+    arr.splice(i, 1, person5)
 
     Display();
     document.getElementById('id').value = '';
@@ -156,11 +138,11 @@ function suagrade(i) {
         'id': arr[i].id,
         'name': arr[i].name,
         'age': arr[i].age,
-        'gender': arr[i].gender ,
-        'grade': grade2 ,
+        'gender': arr[i].gender,
+        'grade': grade2,
         'year': arr[i].year,
     }
-    arr.splice(i,1,person6)
+    arr.splice(i, 1, person6)
 
     Display();
     document.getElementById('id').value = '';
@@ -179,11 +161,11 @@ function suagyear(i) {
         'id': arr[i].id,
         'name': arr[i].name,
         'age': arr[i].age,
-        'gender': arr[i].gender ,
-        'grade': arr[i].grade ,
+        'gender': arr[i].gender,
+        'grade': arr[i].grade,
         'year': year2,
     }
-    arr.splice(i,1,person7)
+    arr.splice(i, 1, person7)
 
     Display();
     document.getElementById('id').value = '';
